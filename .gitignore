@@ -1,0 +1,6 @@
+# NestJS
+/NestJS/dist
+/NestJS/node_modules
+/NestJS/build
+/NestJS/logs
+/NestJS/.env
