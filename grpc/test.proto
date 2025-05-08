@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package test;
+
+
+service demo {
+    rpc hellojlc(hellojlcReq) returns (hellojlcReply){}   //普通rpc协议传输方式
+    rpc TestClientRecvStream(TestClientRecvStreamRequest) returns(stream TestClientRecvStreamResponse){}  //单向服务器端发送给客户端流传输
+    rpc TestClientSendStream(stream TestClientSendStreamRequest) returns(TestClientSendStreamResponse){}  //单向客户端发送给服务器端流传输
+    rpc TestTwoWayStream(stream TestTwoWayStreamRequest) returns(stream TestTwoWayStreamResponse) {}  //双向流传输
+}
+
+message hellojlcReq {
+    string name = 1;
+    int32 age = 2;
+}
+message hellojlcReply {
+    string result = 1;
+}
+
+message TestClientRecvStreamRequest {
+    string data = 1;
+}
+message TestClientRecvStreamResponse {
+    string result = 1;
+}
+
+message TestClientSendStreamRequest {
+    string data = 1;
+}
+message TestClientSendStreamResponse {
+    string result = 1;
+}
+
+message TestTwoWayStreamRequest {
+    string data = 1;
+}
+message TestTwoWayStreamResponse {
+    string result = 1;
+}
