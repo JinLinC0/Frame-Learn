@@ -1,0 +1,25 @@
+{
+  "name": "vue3-ts-gojs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "element-plus": "^2.7.5",
+    "uuid": "^10.0.0",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.30",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "gojs": "^3.0.3",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}
